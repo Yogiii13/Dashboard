@@ -14,37 +14,49 @@
 
 <body>
     <div class="dashboard-container">
+        <header>
+            <h1>Business Dashboard</h1>
+            <p>Explore and export business data from a database of 11.8 million records</p>
+        </header>
+
+        <!-- Loading indicator -->
+        <div id="loading-indicator" class="loading-overlay">
+            <div class="spinner"></div>
+            <p>Loading data...</p>
+        </div>
+
         <div class="filters-container">
-        <div class="filter-group">
-            <label for="city-filter">City:</label>
-            <select id="city-filter">
-                <option value="">All Cities</option>
-            </select>
-        </div>
-        
-        <div class="filter-group">
-            <label for="state-filter">State:</label>
-            <select id="state-filter">
-                <option value="">All States</option>
-            </select>
-        </div>
-        
-        <div class="filter-group">
-            <label for="category-filter">Category:</label>
-            <select id="category-filter">
-                <option value="">All Categories</option>
-            </select>
-        </div>
+            <div class="filter-group">
+                <label for="state-filter">State:</label>
+                <select id="state-filter">
+                    <option value="">All States</option>
+                </select>
             </div>
 
-            <button id="apply-filters">Apply Filters</button>
-            <button id="reset-filters">Reset Filters</button>
+            <div class="filter-group">
+                <label for="city-filter">City:</label>
+                <select id="city-filter" disabled>
+                    <option value="">All Cities</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="category-filter">Category:</label>
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                </select>
+            </div>
+
+            <div class="filter-actions">
+                <button id="apply-filters">Apply Filters</button>
+                <button id="reset-filters">Reset Filters</button>
+            </div>
         </div>
 
         <div class="stats-container">
             <div class="stat-card">
                 <h3>Total Records</h3>
-                <p id="total-records">10,000,000</p>
+                <p id="total-records">11,798,652</p>
             </div>
             <div class="stat-card">
                 <h3>Filtered Records</h3>
@@ -52,7 +64,7 @@
             </div>
             <div class="stat-card">
                 <h3>Selected City</h3>
-                 <p id="selected-cities">All</p>
+                <p id="selected-cities">All</p>
             </div>
             <div class="stat-card">
                 <h3>Selected Categories</h3>
@@ -92,11 +104,11 @@
             <div id="business-grid" class="ag-theme-alpine"></div>
         </div>
 
-        <!-- <div class="pagination-container">
+        <div class="pagination-container">
             <button id="prev-page" disabled>Previous</button>
             <span id="page-info">Page 1 of 1</span>
             <button id="next-page">Next</button>
-        </div> -->
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
