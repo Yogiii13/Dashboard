@@ -11,6 +11,13 @@ This project is a **one-pager dashboard** designed to manage and analyze busines
 - **Export Options**:
   - Data can be exported in **CSV, JSON, and XLSX** formats
 
+## Demo Screenshots
+
+![Dashboard Main View](screenshots/dashboard-main.png)
+![Filter Example](screenshots/dashboard-filter-1.png)
+![Filter Example](screenshots/dashboard-filter-2.png)
+![Export Options](screenshots/dashboard-export.png)
+
 ## Prerequisites
 - Python 3.8+
 - MongoDB
